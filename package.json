@@ -1,0 +1,25 @@
+{
+  "name": "javascript-development-environment",
+  "version": "1.0.0",
+  "description": "Javascript Development Environment",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lavaldi/js-dev-env.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Claudia Valdivieso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lavaldi/js-dev-env/issues"
+  },
+  "homepage": "https://github.com/lavaldi/js-dev-env#readme",
+  "devDependencies": {
+    "express": "^4.15.2",
+    "open": "0.0.5"
+  }
+}
