@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Javascript Development Environment",
   "scripts": {
+    "prestart": "node build-scripts/start-message.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src": "node build-scripts/src-server.js",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 3000",
+    "share": "npm-run-all --parallel open:src localtunnel",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +25,9 @@
   },
   "homepage": "https://github.com/lavaldi/js-dev-env#readme",
   "devDependencies": {
+    "chalk": "^1.1.3",
     "express": "^4.15.2",
+    "npm-run-all": "^4.0.2",
     "open": "0.0.5"
   }
 }
