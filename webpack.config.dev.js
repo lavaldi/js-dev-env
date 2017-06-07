@@ -1,4 +1,5 @@
 import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default {
   devtool: "inline-source-map",
@@ -11,7 +12,13 @@ export default {
     publicPath:"/",
     filename: "bundle.js"
   },
-  plugins: [],
+  plugins: [
+    // Create HTML file that includes reference to bundled JS
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+      inject: true // injects what is necessary to the view
+    })
+  ],
   module:{
     rules:[
       {
